@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import NavBar from './NavBar';
+import ContractQAComponent from './ContractQAComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="bg-blue-600 text-white p-4">
-        <h1 className="text-3xl">Lizzy AI Contract Q&A</h1>
-      </header>
-      <main className="p-4">
+    <div className="App bg-gray-100 min-h-screen">
+      <NavBar />
+      <main className="p-6">
         <ContractQAComponent />
       </main>
     </div>

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import FileUpload from './FileUpload';
 
 const ContractQAComponent = () => {
+  const [document, setDocument] = useState('');
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
+  const [highlightedText, setHighlightedText] = useState('');
 
   const handleQuestionChange = (e) => {
     setQuestion(e.target.value);
@@ -10,14 +13,19 @@ const ContractQAComponent = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Placeholder for API call to get the answer
+    // Placeholder for API call to get the answer and highlighted text
     // Replace with actual API call logic
     setAnswer('This is a placeholder answer. Replace with API call response.');
+    setHighlightedText('This is a highlighted text from the document.');
+  };
+
+  const handleFileUpload = (fileContent) => {
+    setDocument(fileContent);
   };
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Contract Q&A</h1>
+      <FileUpload onFileUpload={handleFileUpload} />
       <form onSubmit={handleFormSubmit} className="mb-4">
         <label htmlFor="question" className="block text-lg font-medium text-gray-700 mb-2">
           Ask a question about the contract:
@@ -38,9 +46,15 @@ const ContractQAComponent = () => {
         </button>
       </form>
       {answer && (
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 mb-4">
           <h2 className="text-xl font-semibold mb-2">Answer</h2>
           <p className="text-gray-700">{answer}</p>
+        </div>
+      )}
+      {highlightedText && (
+        <div className="bg-yellow-100 shadow-md rounded-lg p-6">
+          <h2 className="text-xl font-semibold mb-2">Highlighted Text in Document</h2>
+          <p className="text-gray-700">{highlightedText}</p>
         </div>
       )}
     </div>
@@ -48,3 +62,4 @@ const ContractQAComponent = () => {
 };
 
 export default ContractQAComponent;
+
