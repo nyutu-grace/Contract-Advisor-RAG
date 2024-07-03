@@ -4,33 +4,7 @@
 Lizzy AI is an early-stage Israeli startup, developing the next-generation contract AI, aiming to build a fully autonomous artificial contract lawyer. This repository contains the implementation of a RAG (Retrieval-Augmented Generation) system for Contract Q&A.
 
 ## Project Structure
-CONTRACT-ADVISOR-RAG
-├── backend
-├── data
-├── frontend
-├── notebooks
-│ ├── model_prompt_parser.ipynb
-│ └── rag.ipynb
-└── src
-├── evaluation
-│ ├── init.py
-│ └── evaluator.py
-├── generation
-│ ├── init.py
-│ └── generator.py
-├── retrieval
-│ ├── init.py
-│ ├── retriever.py
-│ └── chunk.py
-│ └── dataloader.py
-│ └── rag_pipeline.py
-└── tests
-├── venv
-├── .env
-├── .gitignore
-├── LICENSE
-├── README.md
-└── requirements.txt
+
 
 ## Getting Started
 
