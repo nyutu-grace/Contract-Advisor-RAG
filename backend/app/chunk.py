@@ -13,11 +13,7 @@ class ChunkDocuments:
             chunks.append(chunk)
         return chunks
     
-    def _remove_special_characters(self, text):
-        # Define a regex pattern to match the special characters
-        pattern = r'- | \t|●|\n|\[|\]'
-        # Use re.sub() to replace matches of the pattern with an empty string
-        cleaned_string = re.sub(pattern, '', text)
-        return cleaned_string
+contract_chunks_raptor = chunk_text(qa_text_raptor)
+qa_chunks_raptor = chunk_text(contract_text_raptor)
 
     
