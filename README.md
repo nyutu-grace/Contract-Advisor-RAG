@@ -15,10 +15,11 @@ The repository contains an evaluation set with two contracts (a short one and a 
 
 
 ## Project Structure
--   **/backend:** Contains the codebase for the RAG system.
+-   **/config:** Contains configuration files.
 -   **/data:** Contains the evaluation set and data preparation scripts.
--   **/frontend:** Contains the react add setup.
 -   **/notebooks:** Contains jupyter notebooks for analysis.
+-   **/scripts:** Contains utility scripts.
+-   **/src:** Contains the main application code.
 -   **/tests:** Contains tests for the python scripts.
 -   **/requirements.txt:** Lists of dependencies.
 
